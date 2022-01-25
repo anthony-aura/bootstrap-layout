@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+    <style>
+        h1::before {
+            content: 'Hello ';
+            color: lime;
+        }
+
+        h1::after {
+            content: ' Gelo';
+        }
+
+        blockquote::before {
+            content: open-quote;
+            color: magenta;
+            font-size: 2em;
+        }
+
+        blockquote::after {
+            content: close-quote;
+            color: mediumturquoise;
+            font-size: 2em;
+        }
+
+        .section-title {
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            background-color: magenta;
+            height: 2px;
+            width: 100%;
+        }
+
+        .required::after {
+            content: ' *';
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Having fun with Pseudo pseudo vai bon</h1>
+    <h1> Having fun with Pseudo pseudo bondhu bandhobi</h1>
+    <section>
+        <h2 class="section-title">Best Quotes</h2>
+        <blockquote>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur sit sint ea cum officiis illo
+            veniam at numquam doloribus modi molestiae consequuntur nam odio dolores recusandae, a vitae. Itaque,
+            recusandae?</blockquote>
+    </section>
+    <label class="required" for="">Name:</label>
+    <input type="text" name="name" placeholder="Type your name" required id="">
+    <input type="submit" value="Submit">
+</body>
+
+</html>
